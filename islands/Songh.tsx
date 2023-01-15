@@ -9,14 +9,18 @@ interface SongInt {
 
 let songs: SongInt[] = [
   {
-    name: "小雨来的正是时候",
-    url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E5%B0%8F%E9%9B%A8%E6%9D%A5%E7%9A%84%E6%AD%A3%E6%98%AF%E6%97%B6%E5%80%99.mp3?alt=media&token=6fb05107-347e-4fcc-8e2d-a3346b65f3de"
+    name: "一阵恼人的秋风",
+    url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E4%B8%80%E9%98%B5%E6%81%BC%E4%BA%BA%E7%9A%84%E7%A7%8B%E9%A3%8E.mp3?alt=media&token=850a42fc-e17a-4e23-82f0-b3699276d71a"
   },
-{ 
-  name: "在雨中 ",
-  url:"https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E9%9B%A8%E4%B8%AD%E5%BE%98%E5%BE%8A.mp3?alt=media&token=63debe94-cf25-425a-9bb8-843bd57613de"
+  {
+    name: "呢喃",
+    url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E5%91%A2%E5%96%83.mp3?alt=media&token=717c603c-d699-476a-b786-e25cae5319ca"
   },
-  
+
+  {
+    name: "女孩",
+    url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E5%A5%B3%E5%AD%A9%E5%A5%B3%E5%AD%A9.mp3?alt=media&token=74fd9e4b-059c-4895-9a34-38ecfa07b8bb"
+  },  
 ]
 
 export default function Songh() { 
