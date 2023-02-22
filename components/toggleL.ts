@@ -1,14 +1,17 @@
 import { webSocket } from "https://deno.land/x/rxjs@v1.0.2/webSocket/index.ts";
 import { Signal, signal } from "@preact/signals";
+let a = 1
 
- class WebS{
+class WebS{
+   
 
 token:string = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJiMzBmMjJlNGQ0ZmE0ODI2OTY5Y2FjNzI1N2E3YzkxZCIsImlhdCI6MTY3MjM2NTE4MSwiZXhwIjoxOTg3NzI1MTgxfQ.Tg35yySpPSHPA7LysJE0b0Z0WVrxiBnd2Gt0Ek8XSDQ"
  subject = webSocket('ws://24.80.168.30:8123/api/websocket');
 id:number =3
  text?: string
 
-constructor(){
+  constructor() {
+//  console.log(a)
 // this.subject.subscribe({
 //   next: (msg: any )=> {console.log('message received: ' + JSON.stringify(msg))
 
