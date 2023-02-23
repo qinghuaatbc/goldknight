@@ -27,11 +27,11 @@ export default function Songh() {
   const [text, setText]=useState("")
 
   function onKeyUp(ev: KeyboardEvent) {
-    if (ev.code === "Enter") {
+   
       const value = (ev.target as HTMLInputElement).value;
     //  window.location.href = `/find/${value}`
       setText(value)
-    }
+    
   }
   let songPs:SongInt[] = songs.filter(data => { return data.name.includes(text) })
   //alert(JSON.stringify(data4))
