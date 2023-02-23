@@ -35,7 +35,8 @@ export default function LightToggle(props:Light) {
   const [imageOff,setImageOff] =useState("display:none")
 
   ww.subject.subscribe({
-    next: (msg: any )=> {console.log('message received: ' + JSON.stringify(msg))
+    next: (msg: any) => {
+      console.log('message received: ' + JSON.stringify(msg))
       let data1 = msg.type
         if (data1==="event")
            if(msg.event.data.entity_id ===props.entity_id)
@@ -53,7 +54,11 @@ export default function LightToggle(props:Light) {
                setImageOff('display')
              }
             // msgs[1].value=JSON.stringify(msg.event.data.entity_id)
-        }
+           }
+      if (data1 == "result")
+      {
+       console.log(JSON.stringify(msg))
+       }
       //  else
      // props.state.value =JSON.stringify(data1)
       }, // Called whenever there is a message from the server.
@@ -65,12 +70,13 @@ export default function LightToggle(props:Light) {
         < div style ={{position: 'absolute', top: props.top, left: props.left }}>
        <div  >
                <div>{props.name} </div>
-              {/* <button onClick={()=>{
-                 ww.toggle(props.entity_id)
+              <button onClick={()=>{
+           ww.getState()
+           ww.toggle(props.entity_id)
                //  setText("hi again")
                 
-              }}>light toggle</button>
-             */}
+              }}>get state</button>
+            
        </div>
        {/* <div>{props.name}</div> */}
        {/* <div>{props.entity_id}</div>

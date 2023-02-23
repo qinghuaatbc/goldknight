@@ -44,7 +44,19 @@ id:number =3
 
    this.id++
 
+   this.subject.next(
+    {
+        "id": this.id,
+        "type": "subscribe_events",
+        // Optional
+        "event_type": "entity_registry"
+      }
 
+  )
+
+  
+
+   this.id++
 }
 
  toggle(entity_id:string){
@@ -71,7 +83,18 @@ id:number =3
       this.id++
  }
 
+ getState(){
+      
+  this.subject.next(
+     {
+         "id": this.id,
+         "type": "get_states",
+       
+       }
+  )
 
+   this.id++
+}
   
 
 
