@@ -36,7 +36,7 @@ export default function LightToggle(props:Light) {
 
   ww.subject.subscribe({
     next: (msg: any) => {
-      console.log('message received: ' + JSON.stringify(msg))
+      // console.log('message received: ' + JSON.stringify(msg))
       let data1 = msg.type
         if (data1==="event")
            if(msg.event.data.entity_id ===props.entity_id)
@@ -55,9 +55,22 @@ export default function LightToggle(props:Light) {
              }
             // msgs[1].value=JSON.stringify(msg.event.data.entity_id)
            }
-      if (data1 == "result")
+      if (data1 === "result")
+        if (msg.result !=null)
       {
-       console.log(JSON.stringify(msg))
+         let ress :any[] =msg.result
+         let res1 = ress.find(res=>res.entity_id ===props.entity_id)
+          console.log(res1.state)
+          if (res1.state === "on")
+           {
+            setImageOn("display ")
+            setImageOff("display: none")
+          }
+
+          else {
+            setImageOn('display: none')
+            setImageOff('display')
+          }
        }
       //  else
      // props.state.value =JSON.stringify(data1)
@@ -70,12 +83,12 @@ export default function LightToggle(props:Light) {
         < div style ={{position: 'absolute', top: props.top, left: props.left }}>
        <div  >
                <div>{props.name} </div>
-              <button onClick={()=>{
+              {/* <button onClick={()=>{
            ww.getState()
            ww.toggle(props.entity_id)
                //  setText("hi again")
                 
-              }}>get state</button>
+              }}>get state</button> */}
             
        </div>
        {/* <div>{props.name}</div> */}

@@ -56,7 +56,20 @@ id:number =3
 
   
 
-   this.id++
+    this.id++
+    
+    this.subject.next(
+      {
+          "id": this.id,
+          "type": "get_states",
+        
+        }
+   )
+ 
+    this.id++
+
+
+    
 }
 
  toggle(entity_id:string){
