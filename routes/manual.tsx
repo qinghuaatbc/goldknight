@@ -12,7 +12,7 @@ export default function manual() {
       <Header />
 
       <div className={tw`w-screen flex justify-center`}>
-        <div className={tw`w-5/6 py-16`}>
+        <div className={tw`w-5/6 py-3`}>
           <h1 className={tw`text-3xl font-thin mb-6 text-center`}>
               Manuals
           </h1>

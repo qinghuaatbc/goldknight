@@ -13,7 +13,7 @@ export default function light() {
 
       <div className={tw`w-screen flex justify-center`}>
         <div  
-          className={tw`w-5/6 py-16 `}>
+          className={tw`w-5/6 py-3 `}>
           <h1 className={tw`text-3xl font-thin mb-6 text-center`}>
               Lights
           </h1>
@@ -21,6 +21,8 @@ export default function light() {
              src = "main1024X636.png"/> 
             <LightToggle top="30%" left="30%" entity_id="light.hall_closet_ceiling_light" name="family" ></LightToggle>
             <LightToggle top= "60%" left= "50%" entity_id="light.shower_bathroom_shower_lights" name="washroom" ></LightToggle>
+            <LightToggle top="40%" left="40%" entity_id="light.hall_closet_ceiling_light" name="family" ></LightToggle>
+            <LightToggle top= "65%" left= "65%" entity_id="light.shower_bathroom_shower_lights" name="washroom" ></LightToggle>
    
         </div>
     </div>

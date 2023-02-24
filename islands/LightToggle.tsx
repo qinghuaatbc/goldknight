@@ -30,7 +30,7 @@ export default function LightToggle(props:Light) {
  //  props.image= signal(" ") 
   
  
-  const [state,setState] = useState('off')
+  // const [state,setState] = useState('off')
   const [imageOn, setImageOn] = useState("display")
   const [imageOff,setImageOff] =useState("display:none")
 
@@ -41,7 +41,7 @@ export default function LightToggle(props:Light) {
         if (data1==="event")
            if(msg.event.data.entity_id ===props.entity_id)
           { let data2 =(msg.event.data.new_state.state)
-             setState(data2)
+            //  setState(data2)
              console.log((data2=="on"))
            //  console.log((data2==="on"))
              if ((data2 === "on")) {
@@ -56,9 +56,11 @@ export default function LightToggle(props:Light) {
             // msgs[1].value=JSON.stringify(msg.event.data.entity_id)
            }
       if (data1 === "result")
-        if (msg.result !=null)
+        if (msg.result != null)
+        
       {
-         let ress :any[] =msg.result
+        console.log(msg.result)
+          let ress: any[] = msg.result
          let res1 = ress.find(res=>res.entity_id ===props.entity_id)
           console.log(res1.state)
           if (res1.state === "on")
