@@ -59,7 +59,7 @@ export default function LightToggle(props:Light) {
         if (msg.result != null)
         
       {
-        console.log(msg.result)
+       // console.log(msg.result)
           let ress: any[] = msg.result
          let res1 = ress.find(res=>res.entity_id ===props.entity_id)
           console.log(res1.state)
@@ -101,7 +101,15 @@ export default function LightToggle(props:Light) {
        {/* <div>{imageOn}</div> */}
        {/* <img src={image} /> */}
         {/* position: 'absolute', top: 200, left: 100  */}
-       <img 
+       
+       <img style={ imageOff}
+         onClick={() => {
+         ww.toggle(props.entity_id)
+         //  setText("hi again")
+       }}
+         src="light-off60x60.png" /> 
+
+<img 
          style={imageOn}
 
          onClick={() => {
@@ -110,13 +118,6 @@ export default function LightToggle(props:Light) {
                 
               }}
         src="light-on60x60.png" /> 
-       <img style={ imageOff}
-         onClick={() => {
-         ww.toggle(props.entity_id)
-         //  setText("hi again")
-       }}
-         src="light-off60x60.png" /> 
-
 
       </div>    
  

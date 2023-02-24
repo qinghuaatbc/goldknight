@@ -9,7 +9,9 @@ export default function Header() {
   return <div className={tw`w-screen flex justify-center border-b-[1px]`}>
     <div className={tw`w-5/6 py-8 flex`}>
       <a href="/">
-        <span className={tw`text-3xl`}>🎬</span>
+        {/* <span className={tw`text-3xl`}><img src="goldknight2.png" /></span> */}
+        <img src ="goldknight2.png"/>
+
       </a>
       <nav className={tw`ml-auto`}>
         <ul class={tw`flex text-sm w-full`}>

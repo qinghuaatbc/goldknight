@@ -109,7 +109,28 @@ id:number =3
    this.id++
 }
   
+setValue(entity_id?: string, value?: number) { 
+  this.subject.next({
+    "id": this.id,
+    "type": "call_service",
+    "domain": "light",
+    "service": "turn_on",
+    // Optional
+    "service_data": {
+      "brightness_pct": value
+    },
+    "target":{
+      "entity_id" : entity_id
 
+     
+    }
+  })
+  this.id++
+  
+}
+
+
+  
 
 }
 

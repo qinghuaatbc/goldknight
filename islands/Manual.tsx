@@ -38,7 +38,7 @@ export default function Manual() {
   const manualLists = man.map((man:ManulPdf) => { 
     return (
       <div>
-        <div class={tw`text-3xl  text-center`} ><a href={man.url }>{ man.name}</a></div>
+        <div class={tw`text-2xl  text-center`} ><a href={man.url }>{ man.name}</a></div>
 
 
        </div>

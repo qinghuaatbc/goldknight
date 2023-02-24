@@ -52,7 +52,7 @@ export default function Songh() {
       <div class={tw`w-1/2 pt-8 mx-auto`}>
       <input
         onKeyUp={onKeyUp}
-        class={tw`transition  text-4xl px-3 py-4  relative w-full bg-white bg-white rounded border border-2 border-black-300 focus:border-blue-600 outline-none outline-none font-bold`} 
+        class={tw`transition  text-2xl px-3 py-4  relative w-full bg-white bg-white rounded border border-2 border-black-300 focus:border-blue-600 outline-none outline-none font-bold`} 
       />
     </div>
       <div>
