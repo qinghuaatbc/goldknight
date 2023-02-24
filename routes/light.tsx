@@ -24,9 +24,9 @@ export default function light() {
             <LightToggle top= "65%" left= "65%" entity_id="light.shower_bathroom_shower_lights" name="washroom" ></LightToggle>
            
           
-            <LightSlider top="39%" left="35%" entity_id="light.hall_closet_ceiling_light" name="washroom" ></LightSlider>
+            <LightSlider top="39%" left="45%" entity_id="light.hall_closet_ceiling_light" name="washroom" ></LightSlider>
 
-            <LightSlider top= "71%" left= "70%" entity_id="light.shower_bathroom_shower_lights" name="washroom" ></LightSlider>
+            <LightSlider top= "71%" left= "80%" entity_id="light.shower_bathroom_shower_lights" name="washroom" ></LightSlider>
 
 
         </div>
