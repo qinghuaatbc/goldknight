@@ -148,9 +148,25 @@ export interface Light{
 
 }
 
-export async function getLights(filePath: string) { 
+export async function getJson(filePath: string) { 
 
   return JSON.parse(await Deno.readTextFile(filePath))
 
+
+}
+
+export async function getUrlJson(fileUrl: string) { 
+
+  const jsonResponse = await fetch(fileUrl);
+  const jsonData = await jsonResponse.json();
+  return jsonData
+
+}
+
+export async function getUrlJsonFirebase(fileUrl: string) { 
+
+  const jsonResponse = await fetch(fileUrl);
+  const jsonData = await jsonResponse.json();
+  return Object.values(jsonData)
 
 }

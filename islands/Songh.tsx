@@ -1,28 +1,31 @@
 import { tw } from "twind";
 
 import { useState } from "preact/hooks";
+import { getUrlJson, getUrlJsonFirebase } from "../components/lightControl.ts";
 
 interface SongInt { 
   name: string,
   url :string
 } 
 
-let songs: SongInt[] = [
-  {
-    name: "一阵恼人的秋风",
-    url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E4%B8%80%E9%98%B5%E6%81%BC%E4%BA%BA%E7%9A%84%E7%A7%8B%E9%A3%8E.mp3?alt=media&token=850a42fc-e17a-4e23-82f0-b3699276d71a"
-  },
-  {
-    name: "呢喃",
-    url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E5%91%A2%E5%96%83.mp3?alt=media&token=717c603c-d699-476a-b786-e25cae5319ca"
-  },
+// let songs: SongInt[] = [
+//   {
+//     name: "一阵恼人的秋风",
+//     url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E4%B8%80%E9%98%B5%E6%81%BC%E4%BA%BA%E7%9A%84%E7%A7%8B%E9%A3%8E.mp3?alt=media&token=850a42fc-e17a-4e23-82f0-b3699276d71a"
+//   },
+//   {
+//     name: "呢喃",
+//     url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E5%91%A2%E5%96%83.mp3?alt=media&token=717c603c-d699-476a-b786-e25cae5319ca"
+//   },
 
-  {
-    name: "女孩",
-    url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E5%A5%B3%E5%AD%A9%E5%A5%B3%E5%AD%A9.mp3?alt=media&token=74fd9e4b-059c-4895-9a34-38ecfa07b8bb"
-  },  
-]
+//   {
+//     name: "女孩",
+//     url: "https://firebasestorage.googleapis.com/v0/b/customer-f29a1.appspot.com/o/song%2F%E8%B4%B9%E7%BF%94%20-%20%E5%A5%B3%E5%AD%A9%E5%A5%B3%E5%AD%A9.mp3?alt=media&token=74fd9e4b-059c-4895-9a34-38ecfa07b8bb"
+//   },  
+// ]
 
+// let songs: SongInt[] = await getUrlJson("https://raw.githubusercontent.com/qinghuaatbc/json/main/songs.json")
+const songs: SongInt[] = await getUrlJsonFirebase("https://customer-f29a1.firebaseio.com/Songs.json") as SongInt[]
 export default function Songh() { 
   const [text, setText]=useState("")
 

@@ -11,11 +11,12 @@ import * as $4 from "./routes/manual.tsx";
 import * as $5 from "./routes/project.tsx";
 import * as $6 from "./routes/song.tsx";
 import * as $$0 from "./islands/Counter.tsx";
-import * as $$1 from "./islands/LightSlider.tsx";
-import * as $$2 from "./islands/LightToggle.tsx";
-import * as $$3 from "./islands/Manual.tsx";
-import * as $$4 from "./islands/Project.tsx";
-import * as $$5 from "./islands/Songh.tsx";
+import * as $$1 from "./islands/LightLists.tsx";
+import * as $$2 from "./islands/LightSlider.tsx";
+import * as $$3 from "./islands/LightToggle.tsx";
+import * as $$4 from "./islands/Manual.tsx";
+import * as $$5 from "./islands/Project.tsx";
+import * as $$6 from "./islands/Songh.tsx";
 
 const manifest = {
   routes: {
@@ -29,11 +30,12 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $$0,
-    "./islands/LightSlider.tsx": $$1,
-    "./islands/LightToggle.tsx": $$2,
-    "./islands/Manual.tsx": $$3,
-    "./islands/Project.tsx": $$4,
-    "./islands/Songh.tsx": $$5,
+    "./islands/LightLists.tsx": $$1,
+    "./islands/LightSlider.tsx": $$2,
+    "./islands/LightToggle.tsx": $$3,
+    "./islands/Manual.tsx": $$4,
+    "./islands/Project.tsx": $$5,
+    "./islands/Songh.tsx": $$6,
   },
   baseUrl: import.meta.url,
   config,
