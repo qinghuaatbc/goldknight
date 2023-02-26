@@ -3,22 +3,11 @@ import { tw } from "twind";
 import { useState } from "preact/hooks";
 
 
-import { ww } from "../components/toggleL.ts";
+import { Light, ww } from "../components/lightControl.ts";
  
 
  
- interface Light{
-    
-    name: string  
-   entity_id: string
-   
-   top: string
-   left: string
-  //  state : Signal<string> 
-  // image:  Signal<string> 
-   
-
- }
+ 
 
  
 

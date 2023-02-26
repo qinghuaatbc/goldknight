@@ -135,3 +135,22 @@ setValue(entity_id?: string, value?: number) {
 }
 
 export const ww = new WebS()
+export interface Light{
+    
+ name: string  
+ entity_id: string
+ 
+ top: number
+ left: number
+//  state : Signal<string> 
+// image:  Signal<string> 
+ 
+
+}
+
+export async function getLights(filePath: string) { 
+
+  return JSON.parse(await Deno.readTextFile(filePath))
+
+
+}

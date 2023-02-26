@@ -4,23 +4,10 @@ import { useState } from "preact/hooks";
 
 import { Signal, signal } from "@preact/signals";
 
-import { ww } from "../components/toggleL.ts";
+import { Light, ww } from "../components/lightControl.ts";
  
 
  
- export interface Light{
-    
-    name: string  
-   entity_id: string
-   
-   top: string
-   left: string
-  //  state : Signal<string> 
-  // image:  Signal<string> 
-   
-
- }
-
  
 
    

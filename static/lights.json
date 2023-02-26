@@ -1,0 +1,40 @@
+[
+  
+  {
+    "name": "family",
+    "top": 200,
+    "left": 500,
+    "entity_id":"light.hall_closet_ceiling_light"
+
+  },
+
+  {
+    "name": "family",
+
+    "top": 300,
+    "left": 200,
+    "entity_id":"light.hall_closet_ceiling_light"
+
+  },
+
+  {
+    "name": "family",
+
+    "top": 500,
+    "left": 500,
+    "entity_id":"light.shower_bathroom_shower_lights"
+
+  },
+
+  {
+    "name": "family",
+
+    "top": 600,
+    "left": 300,
+    "entity_id":"light.shower_bathroom_shower_lights"
+
+  }
+
+
+
+]
