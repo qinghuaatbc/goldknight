@@ -3,13 +3,13 @@ import Header from "../components/Header.tsx";
 import { tw } from "twind";
 import LightToggle from "../islands/LightToggle.tsx";
 import LightSlider from "../islands/LightSlider.tsx";
-import {  getUrlJson, getUrlJsonFirebase, Light } from "../components/lightControl.ts";
 import LightLists from "../islands/LightLists.tsx";
+import { getUrlJson, Light } from "../components/lightControl.ts";
 
 
 // let lights:Light[]= await getLights("./static/lights.json")
-//  const  lights:Light[]= await getUrlJson("https://raw.githubusercontent.com/qinghuaatbc/json/main/lights.json") as Light[]
-const lights:Light[]= await getUrlJsonFirebase("https://customer-f29a1.firebaseio.com/HALight.json") as Light[]
+ const  lights:Light[]= await getUrlJson("https://jhqsoihgyovqunxunsep.supabase.co/storage/v1/object/sign/goldknight/json/lights.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJnb2xka25pZ2h0L2pzb24vbGlnaHRzLmpzb24iLCJpYXQiOjE2Nzc0NDQ0ODksImV4cCI6MTcwODk4MDQ4OX0.XjN5k7nm7-5UzSxYRi8Zwl2dWci3gNoQPHxxgnGigNE&t=2023-02-26T20%3A48%3A08.990Z") as Light[]
+//const lights:Light[]= await getUrlJsonFirebase("https://customer-f29a1.firebaseio.com/HALight.json") as Light[]
 
 console.log(lights)
 {/* <LightToggle top={light.top} left={light.left} entity_id={light.entity_id} name=""></LightToggle> */}

@@ -3,7 +3,7 @@ import { tw } from "twind";
 import { useState } from "preact/hooks";
 import { getUrlJsonFirebase } from "../components/lightControl.ts";
 
-interface SongInt { 
+interface Movie { 
   name: string,
   url :string
 } 
@@ -11,7 +11,7 @@ interface SongInt {
 
 
 // let songs: SongInt[] = await getUrlJson("https://raw.githubusercontent.com/qinghuaatbc/json/main/songs.json")
-const songs: SongInt[] = await getUrlJsonFirebase("https://customer-f29a1.firebaseio.com/Songs.json") as SongInt[]
+const movies: Movie[] = await getUrlJsonFirebase("https://customer-f29a1.firebaseio.com/Movies.json") as Movie[]
 export default function Songh() { 
   const [text, setText]=useState("")
 
@@ -22,12 +22,12 @@ export default function Songh() {
       setText(value)
     
   }
-  let songPs:SongInt[] = songs.filter(data => { return data.name.includes(text) })
+  let movie1s:Movie[] = movies.filter(data => { return data.name.includes(text) })
   //alert(JSON.stringify(data4))
-  const songLists = songPs.map((song1:SongInt) => { 
+  const movieLists = movie1s.map((movie1:Movie) => { 
     return (
       <div>
-        <div class={tw`text-3xl  text-center`} ><a href={song1.url }>{ song1.name}</a></div>
+        <div class={tw`text-3xl  text-center`} ><a href={movie1.url }>{ movie1.name}</a></div>
 
 
        </div>
@@ -47,7 +47,7 @@ export default function Songh() {
       <div>
 
 
-      { songLists}
+      { movieLists}
       
       </div>
       

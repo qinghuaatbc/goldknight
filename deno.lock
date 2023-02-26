@@ -153,7 +153,6 @@
     "https://esm.sh/v95/twind@0.16.17/deno/sheets.js": "f75586c3a778278f99ca9e6761e8c8a2089c66d6a503bb25e3bba38597fe1e30",
     "https://esm.sh/v95/twind@0.16.17/deno/twind.js": "eabba78876689664713db69bed7704ed9b195323e85521fb459afb8e19a12b7c",
     "https://esm.sh/v95/twind@0.16.17/sheets/sheets.d.ts": "cb829f9aac41ea0ac7561bbca7bd1300101bbf96d689c4a3ad6cb13e04216a88",
-    "https://esm.sh/v95/twind@0.16.17/twind": "d3c4c401aee51e9f7b7bd4859b872265380691c20e35a395b1eea2de5cd914d4",
     "https://esm.sh/v95/twind@0.16.17/twind.d.ts": "a171803449308d1950fed2356f1fc5921623b25229fa962d97b6763f9e46f73b"
   }
 }
