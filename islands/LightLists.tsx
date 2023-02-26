@@ -3,8 +3,8 @@ import LightSlider from "./LightSlider.tsx";
 import LightToggle from "./LightToggle.tsx";
 
 const lights:Light[]= await getUrlJsonFirebase("https://customer-f29a1.firebaseio.com/HALight.json") as Light[]
+export default function LightLists() {
 
-export default function LightLists():any{ 
   
   const lightLists = lights.map((light) => {
     return (

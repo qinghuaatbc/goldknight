@@ -8,13 +8,21 @@ import LightLists from "../islands/LightLists.tsx";
 
 
 // let lights:Light[]= await getLights("./static/lights.json")
-//  let lights:Light[]= await getUrlJson("https://raw.githubusercontent.com/qinghuaatbc/json/main/lights.json")
-//console.log(lights)
+//  const  lights:Light[]= await getUrlJson("https://raw.githubusercontent.com/qinghuaatbc/json/main/lights.json") as Light[]
+const lights:Light[]= await getUrlJsonFirebase("https://customer-f29a1.firebaseio.com/HALight.json") as Light[]
+
+console.log(lights)
 {/* <LightToggle top={light.top} left={light.left} entity_id={light.entity_id} name=""></LightToggle> */}
 
 export default function light() { 
-
- 
+  const lightLists = lights.map((light) => {
+    return (
+      <div>
+        <LightToggle top={light.top} left={light.left} entity_id={light.entity_id} name={light.name}></LightToggle>
+        <LightSlider top={light.top + 80} left={light.left - 20} entity_id={light.entity_id} name="" ></LightSlider>
+      </div>
+    )
+  })
  
   return (
    
@@ -32,8 +40,8 @@ export default function light() {
             {/* <LightToggle top="33%" left="30%" entity_id="light.hall_closet_ceiling_light" name="family" ></LightToggle>
             <LightToggle top= "65%" left= "65%" entity_id="light.shower_bathroom_shower_lights" name="washroom" ></LightToggle>
             */}
-
-           <LightLists></LightLists>
+           { lightLists} 
+           {/* <LightLists></LightLists> */}
           {/* <LightSlider top="39%" left="45%" entity_id="light.hall_closet_ceiling_light" name="washroom" ></LightSlider>
 
             <LightSlider top= "71%" left= "80%" entity_id="light.shower_bathroom_shower_lights" name="washroom" ></LightSlider> */}
