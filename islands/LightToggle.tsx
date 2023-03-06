@@ -9,8 +9,6 @@ import { Light, ww } from "../components/lightControl.ts";
 
  
  
-
-   
 export default function LightToggle(props:Light) {
    
  //  props.state = signal(" ")
@@ -92,7 +90,7 @@ export default function LightToggle(props:Light) {
        <img style={ imageOff}
          onClick={() => {
          ww.toggle(props.entity_id)
-         //  setText("hi again")
+         //alert(window.innerWidth)
        }}
          src="light-off60x60.png" /> 
 

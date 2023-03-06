@@ -2,6 +2,7 @@ import { tw } from "twind";
 
 import { useState } from "preact/hooks";
 import { getUrlJsonFirebase } from "../components/lightControl.ts";
+import VideoPlayer from "./VideoPlayer.tsx";
 
 interface Movie { 
   name: string,
@@ -12,8 +13,9 @@ interface Movie {
 
 // let songs: SongInt[] = await getUrlJson("https://raw.githubusercontent.com/qinghuaatbc/json/main/songs.json")
 const movies: Movie[] = await getUrlJsonFirebase("https://customer-f29a1.firebaseio.com/Movies.json") as Movie[]
-export default function Songh() { 
+export default function Movieh() { 
   const [text, setText]=useState("")
+  const [url, setUrl]=useState("")
 
   function onKeyUp(ev: KeyboardEvent) {
    
@@ -22,14 +24,17 @@ export default function Songh() {
       setText(value)
     
   }
-  let movie1s:Movie[] = movies.filter(data => { return data.name.includes(text) })
+  const  movie1s:Movie[] = movies.filter(data => { return data.name.includes(text) })
   //alert(JSON.stringify(data4))
   const movieLists = movie1s.map((movie1:Movie) => { 
     return (
       <div>
-        <div class={tw`text-3xl  text-center`} ><a href={movie1.url }>{ movie1.name}</a></div>
+        {/* <div class={tw`text-3xl  text-center`} ><a href={movie1.url }>{ movie1.name}</a></div> */}
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg"
+          onClick={() => { 
+              setUrl(movie1.url)
 
-
+          }}/>
        </div>
      )
     
@@ -46,8 +51,10 @@ export default function Songh() {
     </div>
       <div>
 
+      <VideoPlayer url={url} name="" />
 
-      { movieLists}
+        {movieLists}
+
       
       </div>
       

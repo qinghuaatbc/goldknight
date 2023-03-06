@@ -6,7 +6,7 @@ class WebS{
    
 
 token:string = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJiMzBmMjJlNGQ0ZmE0ODI2OTY5Y2FjNzI1N2E3YzkxZCIsImlhdCI6MTY3MjM2NTE4MSwiZXhwIjoxOTg3NzI1MTgxfQ.Tg35yySpPSHPA7LysJE0b0Z0WVrxiBnd2Gt0Ek8XSDQ"
- subject = webSocket('ws://24.80.168.30:8123/api/websocket');
+ subject = webSocket('ws://24.80.166.5:8123/api/websocket');
 id:number =3
  text?: string
 
@@ -140,8 +140,8 @@ export interface Light{
  name: string  
  entity_id: string
  
- top: number
- left: number
+ top: string
+ left: string
 //  state : Signal<string> 
 // image:  Signal<string> 
  
